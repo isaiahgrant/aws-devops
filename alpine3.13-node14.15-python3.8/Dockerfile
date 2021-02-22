@@ -22,8 +22,8 @@ RUN printf "===== Installing Dependencies =====\n\n" && \
     printf " - Installing gcc - \n\n" && apk add --no-cache --virtual vpack1 build-base && \
     printf " - Installing Node and NPM - \n\n" && apk add --no-cache nodejs=${NODE_VERSION}-r0 npm=${NPM_VERSION}-r0 && \
     printf " - Installing Python - \n\n" && \
-        apk --no-cache add python3=${PYTHON_VERSION}-r0 py3-pip=${PIP_VERSION}-r0 && \
-        apk add --no-cache --virtual vpack2 python3-dev=${PYTHON_VERSION}-r0 && \
+        apk --no-cache add python3=${PYTHON_VERSION}-r1 py3-pip=${PIP_VERSION}-r0 && \
+        apk add --no-cache --virtual vpack2 python3-dev=${PYTHON_VERSION}-r1 && \
     printf "\n\n\n\n" && \
     printf "===== Installing AWS Tooling =====\n\n" && \
     printf " - Installing AWS CLI - \n\n" && pip install --no-cache-dir awscli==${AWS_CLI_VERSION} && \

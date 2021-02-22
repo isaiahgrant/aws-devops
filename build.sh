@@ -2,11 +2,11 @@ dockerfile=$1
 
 # This must match the config from the Dockerfile.
 # It exists here to automate tagging
-export ALPINE_VERSION=3.12
-export NODE_VERSION=12.20.1
-export NPM_VERSION=12.20.1
-export PYTHON_VERSION=3.8.5
-export PIP_VERSION=20.1.1
+export ALPINE_VERSION=3.13
+export NODE_VERSION=14.15.5
+export NPM_VERSION=14.15.5
+export PYTHON_VERSION=3.8.7
+export PIP_VERSION=20.3.4
 export AWS_CLI_VERSION=1.19.2
 export AWS_SAM_CLI_VERSION=1.17.0
 export AWS_CDK_CLI_VERSION=1.89.0
@@ -77,6 +77,7 @@ AWS_CDK_CLI_PATCH_TAG=$SOURCE:cdk$AWS_CDK_CLI_MAJOR_VERSION.$AWS_CDK_CLI_MINOR_V
 printf "\n\nBuilding image - $FULL_TAG\n\n"
 RESULT=$(docker build \
     -f $dockerfile \
+    --no-cache \
     --build-arg NODE_VERSION=$NODE_VERSION \
     --build-arg NPM_VERSION=$NPM_VERSION \
     --build-arg PYTHON_VERSION=$PYTHON_VERSION \
