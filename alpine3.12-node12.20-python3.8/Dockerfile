@@ -1,6 +1,6 @@
 ARG ALPINE_VERSION=3.12
-ARG NODE_VERSION=12.22.1
-ARG NPM_VERSION=12.22.1
+ARG NODE_VERSION=12.22.4
+ARG NPM_VERSION=12.22.4
 ARG PYTHON_VERSION=3.8.10
 ARG PIP_VERSION=20.1.1
 ARG AWS_CLI_VERSION=1.20.1
@@ -29,4 +29,5 @@ RUN printf "===== Installing Dependencies =====\n\n" && \
     printf " - Installing AWS CLI - \n\n" && pip install --no-cache-dir awscli==${AWS_CLI_VERSION} && \
     printf " - Installing AWS SAM CLI - \n\n" && pip install --no-cache-dir aws-sam-cli==${AWS_SAM_CLI_VERSION} && \
     printf " - Installing AWS CDK - \n\n" && npm install -g aws-cdk@${AWS_CDK_VERSION} && \
+    apk add bash && \
     npm cache clean -f && apk del --no-cache vpack1 vpack2

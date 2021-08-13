@@ -29,4 +29,5 @@ RUN printf "===== Installing Dependencies =====\n\n" && \
     printf " - Installing AWS CLI - \n\n" && pip install --no-cache-dir awscli==${AWS_CLI_VERSION} && \
     printf " - Installing AWS SAM CLI - \n\n" && pip install --no-cache-dir aws-sam-cli==${AWS_SAM_CLI_VERSION} && \
     printf " - Installing AWS CDK - \n\n" && npm install -g aws-cdk@${AWS_CDK_VERSION} && \
+    apk add bash && \
     npm cache clean -f && apk del --no-cache vpack1 vpack2

@@ -1,15 +1,24 @@
+#!/bin/bash
 dockerfile=$1
 
 # This must match the config from the Dockerfile.
 # It exists here to automate tagging
 export ALPINE_VERSION=3.12
-export NODE_VERSION=12.22.1
-export NPM_VERSION=12.22.1
+export NODE_VERSION=12.22.4
+export NPM_VERSION=12.22.4
 export PYTHON_VERSION=3.8.10
 export PIP_VERSION=20.1.1
 export AWS_CLI_VERSION=1.20.1
 export AWS_SAM_CLI_VERSION=1.26.0
 export AWS_CDK_CLI_VERSION=1.114.0
+# export ALPINE_VERSION=3.12
+# export NODE_VERSION=12.22.1
+# export NPM_VERSION=12.22.1
+# export PYTHON_VERSION=3.8.10
+# export PIP_VERSION=20.1.1
+# export AWS_CLI_VERSION=1.20.1
+# export AWS_SAM_CLI_VERSION=1.26.0
+# export AWS_CDK_CLI_VERSION=1.114.0
 # export ALPINE_VERSION=3.13
 # export NODE_VERSION=14.15.5
 # export NPM_VERSION=14.15.5
